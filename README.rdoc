@@ -1,0 +1,1 @@
+== Dummy Rails 4 application.
