@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+
+  <div class="user">
+    <% if current_user %>
+      <b><%= current_user.email %></b>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path %> <br>
+      <%= link_to "Sign Up", new_user_registration_path %> 
+    <% end %>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>
